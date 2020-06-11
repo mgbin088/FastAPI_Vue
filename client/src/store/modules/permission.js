@@ -1,4 +1,4 @@
-import { defaultRouter } from "@pages/admin/router";
+import { defaultRouter } from "@/router";
 
 
 

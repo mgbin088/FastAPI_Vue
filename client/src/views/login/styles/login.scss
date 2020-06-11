@@ -1,9 +1,14 @@
 .login{
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  overflow: hidden;
+  img{
+    height: 100%;
+    margin-bottom: -110px;
+  }
   &-con{
     position: absolute;
     right: 160px;

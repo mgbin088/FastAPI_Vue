@@ -22,21 +22,18 @@ export default {
   actions: {
     login({state, commit}, params) {
       return new Promise((resolve, reject) => {
-        // post("userinfo/login", params).then(res => {
-        //   if (res.status === 200) {
-        //     const { data } = res;
-        //     if (data.code === 1) {
-        //       commit('Set_Token', data.token);
-        //       setToken(data.token)
-        //     }
-        //   }
-        //   resolve(res)
-        // }).catch(err => {
-        //   reject(err)
-        // })
-        commit('Set_Token', 'hello');
-        setToken('hello');
-        resolve({data: {code: 1}})
+        post("userinfo/login", params).then(res => {
+          if (res.status === 200) {
+            const { data } = res;
+            if (data.code === 1) {
+              commit('Set_Token', data.token);
+              setToken(data.token)
+            }
+          }
+          resolve(res)
+        }).catch(err => {
+          reject(err)
+        });
       })
     },
     getInfo({ commit, state }){

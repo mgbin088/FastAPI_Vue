@@ -21,8 +21,8 @@
   </div>
 </template>
 <script>
-  import codemirror from '../../../components/CodeMirror'
-  import uploadfiles from '../../../components/UploadFiles'
+  import codemirror from '@/components/CodeMirror'
+  import uploadfiles from '@/components/UploadFiles'
   import { get, post } from '@utils/axios'
   import Sticky from "./sticky"
   export default {
@@ -76,7 +76,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../../styles/mixin.scss";
+  @import "@/styles/mixin.scss";
   .create-container {
     position: relative;
     .create-main-container {

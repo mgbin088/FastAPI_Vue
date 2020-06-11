@@ -20,7 +20,12 @@ def include_router(app: FastAPI) -> None:
 
 
 def cors(app: FastAPI) -> None:
-    origins = []
+    origins = [
+        "http://127.0.0.1:8887",
+        "https://127.0.0.1:8887",
+        "http://www.quiet888.com",
+        "https://www.quiet888.com"
+    ]
 
     app.add_middleware(CORSMiddleware,
                        allow_origins=origins,

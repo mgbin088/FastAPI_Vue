@@ -61,7 +61,8 @@
         this.$store.dispatch('app/toggleSidebar')
       },
       async logout() {
-
+        await this.$store.dispatch('userInfo/logout');
+        this.$router.push('/login')
       }
     }
   }

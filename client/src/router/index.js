@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router);
 
-import Layout from '@pages/admin/layout/index'
+import Layout from '@/layout/index'
 
 /*
   
@@ -32,18 +32,18 @@ export const defaultRouter = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import('@pages/admin/views/redirect/index')
+        component: () => import('@/views/redirect/index')
       }
     ]
   },
   {
     path: '/auth-redirect',
-    component: () => import('@pages/admin/views/login/auth-redirect'),
+    component: () => import('@/views/login/auth-redirect'),
     hidden: true
   },
   {
     path: '/login',
-    component: () => import('@pages/admin/views/login/index'),
+    component: () => import('@/views/login/index'),
     hidden: true
   },
   {
@@ -53,7 +53,7 @@ export const defaultRouter = [
     children: [{
       path: 'dashboard',
       name: 'Dashboard',
-      component: () => import('@pages/admin/views/dashboard/index'),
+      component: () => import('@/views/dashboard/index'),
       meta: { title: '首页', affix: true, icon: 'dashboard'}
     }]
   },
@@ -66,13 +66,13 @@ export const defaultRouter = [
       {
         path: "list",
         name: "BarChartAdmin",
-        component: () => import('@pages/admin/views/barchart/index'),
+        component: () => import('@/views/barchart/index'),
         meta: { title: "数据可视化"}
       },
       {
         path: "ll",
         name: "BarChars",
-        component: () => import('@pages/admin/views/barchart/index'),
+        component: () => import('@/views/barchart/index'),
         meta: { title: "数据可视化2"}
       }
     ]
@@ -86,19 +86,19 @@ export const defaultRouter = [
     children: [
       {
         path: 'create',
-        component: () => import('@pages/admin/views/script/create'),
+        component: () => import('@/views/script/create'),
         name: "ScriptCreate",
         meta: { title: '创建脚本', icon: 'edit'}
       },
       {
         path: 'list',
-        component: () => import('@pages/admin/views/script/list'),
+        component: () => import('@/views/script/list'),
         name: "ScriptList",
         meta: { title: '总览', icon: 'list'}
       },
       {
         path: 'edit/:id(\\d+)',
-        component: () => import('@pages/admin/views/script/edit'),
+        component: () => import('@/views/script/edit'),
         name: 'ScriptEdit',
         meta: { title: '脚本编辑', noCache: true, activeMenu: '/script/list' },
         hidden: true
@@ -114,19 +114,19 @@ export const defaultRouter = [
     children: [
       {
         path: 'list',
-        component: () => import('@pages/admin/views/logs/list'),
+        component: () => import('@/views/logs/list'),
         name: "LogsList",
         meta: { title: "脚本日志", icon: "list"}
       },
       {
         path: 'request',
-        component: () => import('@pages/admin/views/logs/list'),
+        component: () => import('@/views/logs/list'),
         name: "LogsRequest",
         meta: { title: "请求日志", icon: "list"}
       },
       {
         path: "message/:id(\\d+)",
-        component: () => import('@pages/admin/views/logs/list'),
+        component: () => import('@/views/logs/list'),
         name: "LogsMessage",
         meta: { title: "日志详情", activeMenu: "/logs/list"},
         hidden: true

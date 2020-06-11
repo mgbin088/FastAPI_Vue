@@ -1,6 +1,7 @@
 <template>
   <div id="Login">
     <div class="login">
+      <img src="../../assets/images/login_bg.jpg" alt="" style="z-index: -1;position: center">
       <div class="login-con">
         <Card icon="log-in" title="欢迎登录" :bordered="false">
           <div class="form-con">
@@ -71,6 +72,6 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    // background-color: #ffffff;
   }
 </style>

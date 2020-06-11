@@ -1,4 +1,5 @@
 import { baseUrl } from  './config'
+import store from '../store'
 import { getToken, TokenKey } from "./auth";
 import Axios from 'axios'
 
@@ -11,7 +12,7 @@ const request = Axios.create({
 
 request.interceptors.request.use(
     config => {
-      if ("") {
+      if (store.getters.userToken) {
         config.headers[TokenKey] = getToken()
       }
       return config

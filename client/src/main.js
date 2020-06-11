@@ -10,6 +10,7 @@ import 'mavon-editor/dist/css/index.css'
 import './styles/element-variables.scss'
 import './styles/index.scss'
 
+
 import '@plugins/element'
 import '@plugins/iview'
 
@@ -21,6 +22,8 @@ Vue.prototype.$Notice.config({
   top: 65,
   duration: 30,
 });
+
+
 
 new Vue({
   el: '#app',
