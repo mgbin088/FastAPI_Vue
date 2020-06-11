@@ -1,0 +1,48 @@
+// base color
+$blue:#324157;
+$light-blue:#3A71A8;
+$red:#C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$panGreen: #30B08F;
+
+
+
+// sidebar
+// 侧边栏文字颜色
+$menuText: #000000;
+// 测边栏选中文字颜色
+$menuActiveText: #000000;
+// 侧边栏选中文字颜色
+$subMenuActiveText: #000000;
+
+// 侧边栏背景
+$menuBg: #eef1f6;
+// 侧边栏鼠标悬浮首页背景
+$menuHover: #ffffff;
+
+// 侧边栏导航背景
+$subMenuBg: #eef1f6;
+// 侧边栏导航鼠标悬浮背景
+$subMenuHover: #ffffff;
+
+
+$sideBarWidth: 220px;
+
+
+
+:export {
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+
+  subMenuActiveText: $subMenuActiveText;
+
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}
