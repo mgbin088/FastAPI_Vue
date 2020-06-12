@@ -61,7 +61,7 @@ export const defaultRouter = [
     path: "/data",
     component: Layout,
     redirect: "/data/list",
-    meta: { title: "数据可视化", },
+    meta: { title: "数据可视化", icon: 'chart'},
     children: [
       {
         path: "list",

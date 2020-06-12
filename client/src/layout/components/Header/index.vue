@@ -26,7 +26,7 @@
               个人中心
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="http://127.0.0.1">
+          <a target="_blank" href="https://github.com/quietking0312/FastAPI_Vue">
             <el-dropdown-item>
               Github
             </el-dropdown-item>
@@ -62,7 +62,7 @@
       },
       async logout() {
         await this.$store.dispatch('userInfo/logout');
-        this.$router.push('/login')
+        this.$router.push({path: `/login?redirect=${this.$route.fullPath}`})
       }
     }
   }

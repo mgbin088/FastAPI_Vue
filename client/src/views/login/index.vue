@@ -6,7 +6,7 @@
         <Card icon="log-in" title="欢迎登录" :bordered="false">
           <div class="form-con">
             <login-form @on-success-valid="handleSubmit" ref="alertObj"></login-form>
-            <p class="login-tip">hello world</p>
+            <p class="login-tip">输入任意用户名密码登录</p>
           </div>
         </Card>
       </div>
