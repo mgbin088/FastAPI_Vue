@@ -8,7 +8,7 @@ function resolve(dir) {
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'?'./' : './',
-  outputDir: '../../output/client',
+  outputDir: 'dist',
   assetsDir: 'assets',
   productionSourceMap: false,
   lintOnSave: false,
