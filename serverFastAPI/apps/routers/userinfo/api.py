@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 @router.post("/login")
-async def login():
+async def login() -> dict:
     visits_collects = Collection(table_name="visits")
     number = visits_collects.get_one()
     if not number:
@@ -18,5 +18,5 @@ async def login():
 
 
 @router.post("/logout")
-async def logout():
+async def logout() -> dict:
     return {"code": 1}

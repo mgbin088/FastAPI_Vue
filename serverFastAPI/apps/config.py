@@ -13,14 +13,14 @@ class DefaultConfig(object):
         self.db_port = 27017
         self.db_name = "fastdb"
         self._configObj = configparser.ConfigParser()
-        self._configObj.read(self.get_config_file()[0])
-        self.add_item()
+        self._configObj.read(self._get_config_file()[0])
+        self._add_item()
 
-    def get_config_file(self):
+    def _get_config_file(self) -> list:
         configPath = os.path.join(self.config_dir, "config.ini")
         return [configPath]
 
-    def add_item(self):
+    def _add_item(self):
         for section in self._configObj.sections():
             for key in self._configObj.options(section):
                 self.__dict__["_".join([section, key])] = self._configObj.get(section, key)
